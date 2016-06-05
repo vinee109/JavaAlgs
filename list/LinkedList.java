@@ -1,5 +1,32 @@
 package list;
 
-public interface LinkedList {
+/**
+ * LinkedList.java
+ *
+ * Created by Vineet Jain on 6/5/16.
+ *
+ *
+ * Implements an abstract class that all Linked Lists (Singly and Doubly) should
+ * extend
+ */
+public abstract class LinkedList<T> {
+    protected int size;
+
+    /**
+     * Returns the number of elements in this Linked List
+     * @return the number of elements in this Linked List
+     */
+    public int size() {
+        return size;
+    }
+
+    /**
+     * Returns whether this Linked List is empty or not
+     * @return true if this Linked List is empty, false otherwise
+     */
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
 
 }
