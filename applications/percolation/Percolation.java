@@ -1,3 +1,5 @@
+package applications.percolation;
+
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 /**
  * applications.percolation.Percolation.java
