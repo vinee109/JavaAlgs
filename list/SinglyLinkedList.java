@@ -2,6 +2,7 @@ package list;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.StringJoiner;
 
 /**
  * list.SinglyLinkedList.java
@@ -109,6 +110,20 @@ public class SinglyLinkedList<T> extends LinkedList<T> {
         return item;
     }
 
+    /**
+     * Returns a string representation of this linked list.
+     * @return a string representation of this linked list
+     */
+    public String toString() {
+        StringJoiner joiner = new StringJoiner(" ");
+        for (T item: this) {
+            joiner.add(item.toString());
+        }
+        return "[ " + joiner.toString() + " ]";
+
+
+    }
+
     public Iterator<T> iterator() {
         return new SLinkedListIterator<T>(head);
     }
@@ -137,7 +152,7 @@ public class SinglyLinkedList<T> extends LinkedList<T> {
         private Node<T> current;
 
         public SLinkedListIterator(Node<T> node) {
-
+            current = node;
         }
 
         /**
@@ -149,7 +164,7 @@ public class SinglyLinkedList<T> extends LinkedList<T> {
          */
         @Override
         public boolean hasNext() {
-            return current.next != null;
+            return current != null;
         }
 
         /**
