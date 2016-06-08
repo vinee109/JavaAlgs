@@ -1,5 +1,7 @@
 package list;
 
+import java.util.Iterator;
+
 /**
  * LinkedList.java
  *
@@ -9,7 +11,7 @@ package list;
  * Implements an abstract class that all Linked Lists (Singly and Doubly) should
  * extend
  */
-public abstract class LinkedList<T> {
+public abstract class LinkedList<T> implements Iterable<T>{
     protected int size;
 
     /**
@@ -28,5 +30,6 @@ public abstract class LinkedList<T> {
         return size == 0;
     }
 
+    public abstract Iterator<T> iterator();
 
 }
