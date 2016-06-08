@@ -132,11 +132,6 @@ public class SinglyLinkedList<T> extends LinkedList<T> {
         T item;
         Node<T> next;
 
-        public Node() {
-            this.item = null;
-            this.next = null;
-        }
-
         public Node(T item) {
             this.item = item;
             this.next = null;
