@@ -96,7 +96,24 @@ public class SinglyLinkedListTest {
 
     @Test
     public void testRemoveEnd() throws Exception {
-
+        SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
+        list.insertEnd(1);
+        list.insertEnd(2);
+        list.insertEnd(2);
+        list.insertEnd(2);
+        assertEquals("[ 1 2 2 2 ]", list.toString());
+        assertEquals(new Integer(2), list.removeEnd());
+        assertEquals(3, list.size());
+        assertEquals("[ 1 2 2 ]", list.toString());
+        assertEquals(new Integer(2), list.removeEnd());
+        assertEquals(2, list.size());
+        assertEquals("[ 1 2 ]", list.toString());
+        assertEquals(new Integer(2), list.removeEnd());
+        assertEquals(1, list.size());
+        assertEquals("[ 1 ]", list.toString());
+        assertEquals(new Integer(1), list.removeEnd());
+        assertEquals(0, list.size());
+        assertEquals("[  ]", list.toString());
     }
 
     @Test
