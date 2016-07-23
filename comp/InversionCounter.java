@@ -30,7 +30,7 @@ public class InversionCounter{
 		int numItems = secondEnd - firstPos + 1;
 		int firstLength = secondPos - firstPos;
 		long numInversion = 0;
-		while(firstPos <= firstEnd && secondPos <= secondEnd){ 
+		while(firstPos <= firstEnd && secondPos <= secondEnd){
 			if (items[firstPos].compareTo(items[secondPos]) <= 0){
 				temp[curr] = items[firstPos];
 				firstPos++;

@@ -62,6 +62,7 @@ public class Deque<Item> implements Iterable<Item> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
+        return null;
     }
 
     /**
@@ -74,6 +75,7 @@ public class Deque<Item> implements Iterable<Item> {
         if (isEmpty()) {
             throw new NoSuchElementException();
         }
+        return null;
     }
 
     public Iterator<Item> iterator() {
